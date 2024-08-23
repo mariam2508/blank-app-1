@@ -1,4 +1,4 @@
-mport streamlit as st
+import streamlit as st
 import pickle
 
 st.title("🎈 Car co2 emssion")
