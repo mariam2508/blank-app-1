@@ -19,6 +19,15 @@ with open('model (1).pkl', 'rb') as file:
 # Predict button
 if st.button("Predict CO2 Emission"):
     res = model.predict([[f1, f2, f3]])  
+    st.write(f"Raw prediction output: {res}")  # Debugging line
+    try:
+        st.success(f"Predicted CO2 Emission: {res[0]:.2f} grams/km")
+    except TypeError as e:
+        st.error(f"Error: {e}. The model might not be returning a numerical value.")
+
+# Predict button
+if st.button("Predict CO2 Emission"):
+    res = model.predict([[f1, f2, f3]])  
     st.success(f"Predicted CO2 Emission: {res[0]:.2f} grams/km")
 
 # Footer
