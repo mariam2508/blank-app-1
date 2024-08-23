@@ -1,6 +1,4 @@
 import streamlit as st
 
-st.title("🎈 My new app2")
-st.write(
-    "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
-)
+st.title("🎈 Car co2 emssion")
+st.numberinput('feature 1',min_value=1,max_value=10)
